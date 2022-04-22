@@ -55,3 +55,74 @@ body{
 .card-body {
     height: 100%;
 }
+.footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#000000;
+}
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+} 
+.footer-basic .social > a:hover {
+    opacity:0.9;
+} 
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+}
+.full-bg {
+    display:flex;
+    background-image: url('../img/bgregis.png');
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.regist-box {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 25px;
+    padding: 2rem 1rem;
+}
+.form-input {
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgb(28, 28, 28);
+    border-radius: 8px;
+    width:100%;
+}
+.form-btn {
+    background-color: #4b72c2;
+    padding: 5px 30px;
+    border-radius: 8px;
+}
+.login-input {
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    width:100%;
+}
+.login-btn{
+    background-color: white;
+    color: #3256c5;
+    padding: 5px 30px;
+    border-radius: 8px;
+    width: 100%;
+}
