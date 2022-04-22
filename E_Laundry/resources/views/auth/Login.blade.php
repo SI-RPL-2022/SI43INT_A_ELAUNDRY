@@ -1,56 +1,38 @@
-@section('title', 'Login')
-@section('content')
-    <section class="section-pagetop bg-dark">
-        <div class="container clearfix">
-            <h2 class="title-page">Login</h2>
-        </div>
-    </section>
-    <section class="section-content bg padding-y">
-        <div class="container">
-            <div class="col-md-6 mx-auto">
-                <div class="card">
-                    <header class="card-header">
-                        <h4 class="card-title mt-2">Sign In</h4>
-                    </header>
-                    <article class="card-body">
-                        <form action="{{ route('login') }}" method="POST" role="form">
-                            @csrf
-                            <div class="form-group">
-                                <label for="email">E-Mail Address</label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}">
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password">
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <div class="form-group row mr-auto">
-                                <div class="col-md-6">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-block"> Login </button>
-                            </div>
-                        </form>
-                    </article>
-                    <div class="border-top card-body text-center">Don't have an account? <a href="{{ route('register') }}">Sign Up</a></div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="{{ url ('/css/style.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="{{ url ('/public/js/main.js') }}"></script>
+</head>
+<body>
+    <section class="full-bg">
+        <div class="container my-5">
+            <div class="row my-lg-5">
+                <div class="col-md-6 col-lg-4 mx-auto">
+                    <center><img src="{{ url ('/image/logoweb.png') }}" style="width:30%"></center>
+                    <input class="login-input my-3" name="" placeholder="Email">
+                    <input class="login-input my-3" name="" placeholder="Password">
+                    <input class="login-btn my-3" type="submit" name="" value="LOGIN">
+                    <center><p class="mt-5 text-Black"><i class="fa-solid fa-lock"></i> Forgot Password</p>
+                    <a href="{{ url ('/Register') }}" class="text-Black">Create an account</a></center>
                 </div>
             </div>
         </div>
     </section>
-@stop
+</body>

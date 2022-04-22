@@ -15,9 +15,17 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/Home', function () {
+Route::get('/', function () {
     return view('Home.Home');
 
 });
 
-Route::get('/auth', [LoginController::class, 'Login']);
+Route::get('/Login', function () {
+    return view('auth.Login');
+
+});
+
+Route::get('/Register', function () {
+    return view('auth.Register');
+
+});

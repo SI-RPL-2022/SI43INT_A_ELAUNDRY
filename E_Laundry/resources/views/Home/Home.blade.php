@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="../Assets/css/style.css" rel="stylesheet">
+    <link href="{{ url ('/css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="../Assets/js/main.js"></script>
+    <script src="{{ url ('/public/js/main.js') }}"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-white bg-white">
@@ -25,7 +25,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
           <a class="navbar-brand" href="#">
-              <img src={{ asset("image/E-LAUNDRYLOGO.png") }} height="75">
+              <img src={{ url ("/image/E-LAUNDRYLOGO.png") }} height="75">
             </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -37,7 +37,7 @@
               </li>
             </ul>
             <div class="d-flex">
-              <a class="btn btn-primary" href="Login.php"><strong>Sign In</strong></a>
+              <a class="btn btn-primary" href="{{ url ('/Login') }}"><strong>Sign In</strong></a>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="hero-100 align-items-center text-center pl-5">
             <h1><strong>Doing Laundry Never Been Easier</strong></h1>
             <h3><strong>Welcome User</strong></h3> 
-            <img src={{ asset("image/picture.png") }} height="500">
+            <img src={{ url ('/image/picture.png') }} height="500">
         </div>
     </section>
 <!-- BLOK2 -->
