@@ -25,12 +25,43 @@
                 <h2 style="text-align:center">REGISTRATION FORM</h2>
                 <div class="row">
                     <div class="col-md-9 col-lg-8 mx-auto">
-                        <form>
-                            <input class="form-input my-3" name="" placeholder="Name">
-                            <input class="form-input my-3" name="" placeholder="Mobile Number">
-                            <input class="form-input my-3" name="" placeholder="Email Address">
-                            <input class="form-input my-3" name="" placeholder="Password">
-                            <input class="form-input my-3" name="" placeholder="Confirm Password">
+                        <form action="/Register" method="post">
+                            @csrf
+                            <input class="form-input my-3 @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name">
+                                @error('name')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            <input class="form-input my-3 @error('mobile_number') is-invalid @enderror" name="mobile_number" id="mobile_number" placeholder="Mobile Number">
+                                @error('mobile_number')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            <input class="form-input my-3 @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email Address" type="email">
+                                @error('email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            <input class="form-input my-3 @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password" type="password">
+                                @error('password')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            <input class="form-input my-3 @error('confirm_password') is-invalid @enderror" name="confirm_password" id="confirm_password" placeholder="Confirm Password" type="password">
+                                @error('confirm_password')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
                             <input class= "form-btn my-3 text-light" type="submit" name="" value="Continue">
                         </form>
                     </div>
