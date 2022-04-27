@@ -22,13 +22,35 @@
 </head>
 <body>
     <section class="full-bg">
+        @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
+        @if(session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('loginError') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
         <div class="container my-5">
             <div class="row my-lg-5">
                 <div class="col-md-6 col-lg-4 mx-auto">
                     <center><img src="{{ url ('/image/logoweb.png') }}" style="width:30%"></center>
-                    <input class="login-input my-3" name="" placeholder="Email">
-                    <input class="login-input my-3" name="" placeholder="Password">
-                    <input class="login-btn my-3" type="submit" name="" value="LOGIN">
+                    <form action="/Login" method="post">
+                        @csrf
+                        <input class="login-input my-3 @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email" autofocus required>
+                            @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        <input class="login-input my-3" name="password" id="password" placeholder="Password" type="password" required>
+                        <input class="login-btn my-3" type="submit" name="" value="LOGIN">
+                    </form>
                     <center><p class="mt-5 text-Black"><i class="fa-solid fa-lock"></i> Forgot Password</p>
                     <a href="{{ url ('/Register') }}" class="text-Black">Create an account</a></center>
                 </div>
