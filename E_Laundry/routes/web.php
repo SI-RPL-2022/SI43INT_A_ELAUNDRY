@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,9 @@ Route::get('/Register', function () {
     return view('auth.Register');
 
 });
+
+Route::post('/Register', [RegisterController::class, 'store']);
+
+Route::post('/Login', [LoginController::class, 'authenticate']);
+
+Route::get('/Dashboard', [DashboardController::class, 'index']);
