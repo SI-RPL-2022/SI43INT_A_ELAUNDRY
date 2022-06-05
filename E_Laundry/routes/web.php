@@ -16,10 +16,11 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/Home', function () {
     return view('Home.Home');
 
 });
+
 
 Route::get('/Login', function () {
     return view('auth.Login');
@@ -28,6 +29,16 @@ Route::get('/Login', function () {
 
 Route::get('/Register', function () {
     return view('auth.Register');
+
+});
+
+Route::get('/service', function () {
+    return view('Service.service');
+
+});
+
+Route::get('/form', function () {
+    return view('Service.form');
 
 });
 

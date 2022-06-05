@@ -126,3 +126,33 @@ body{
     border-radius: 8px;
     width: 100%;
 }
+.btn-kiloan {
+	background-color: #2e5b9e;
+	color: white;
+}
+.btn-sameday {
+	background-color: #3a72c5;
+	color: white;
+}
+.btn-dry {
+	background-color: #82acea;
+	color: white;
+}
+.overlay {
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 15px;
+	padding:1rem;
+}
+.form-services{
+    background-color: #2e5b9e;
+    border: 1px solid black;
+    color: white;
+}
+.form-services:focus{
+    background-color: #007de8;
+    border: 1px solid black;
+    color: white;
+}
+.form-services::placeholder{
+    color: rgb(226, 226, 226);
+}

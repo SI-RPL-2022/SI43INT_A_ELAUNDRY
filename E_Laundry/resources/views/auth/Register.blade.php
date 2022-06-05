@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
+@include("layout.navbar")
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Register</title>
     <!-- Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,5 +71,6 @@
             </div>
         </div>
     </section>
+@include("layout.footer")
 </body>
 </html>
