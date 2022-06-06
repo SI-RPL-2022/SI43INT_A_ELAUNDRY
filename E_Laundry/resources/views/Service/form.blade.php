@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<@include('layout.navbar')
+@include('layout.navbar')
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -41,9 +41,8 @@
                         <div class="col-3">&nbsp;</div>
                         <div class="col-3">&nbsp;</div>
                         <div class="col-3">&nbsp;</div>
-                        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/') }}">Continue</a></div>
+                        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/shipping') }}">Continue</a></div>
                       </div>
-                      
                     </div>
                 </div>
             </div>

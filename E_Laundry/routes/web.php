@@ -16,7 +16,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/Home', function () {
+Route::get('/', function () {
     return view('Home.Home');
 
 });
@@ -39,6 +39,16 @@ Route::get('/service', function () {
 
 Route::get('/form', function () {
     return view('Service.form');
+
+});
+
+Route::get('/shipping', function () {
+    return view('Service.shipping');
+
+});
+
+Route::get('/payment', function () {
+    return view('Service.payment');
 
 });
 
