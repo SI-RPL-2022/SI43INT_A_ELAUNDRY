@@ -26,10 +26,6 @@
             <div class="step-check"></div>
             <span class="step-title">Payment</span>
         </div>
-        <div class="progress-step-container">
-            <div class="step-check"></div>
-            <span class="step-title">Review</span>
-        </div>
     </div>
     <div class="form-container">
         <h2 class="form-title">Shipping Details</h2>

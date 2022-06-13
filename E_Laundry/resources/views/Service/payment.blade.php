@@ -26,10 +26,6 @@
         <div class="step-check"></div>
         <span class="step-title">Payment</span>
     </div>
-    <div class="progress-step-container">
-        <div class="step-check"></div>
-        <span class="step-title">Review</span>
-    </div>
 </div>
 
 <div class="form-container">
@@ -53,7 +49,7 @@
                 <input type="text" name="name" id="name" placeholder="***">
             </div>
         </div>
-        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/review') }}">Complete Order</a></div>
+        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/order') }}">Continue</a></div>
     </form>
 </div>
 </body>

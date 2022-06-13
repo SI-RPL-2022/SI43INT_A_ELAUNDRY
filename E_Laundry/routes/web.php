@@ -21,6 +21,10 @@ Route::get('/', function () {
 
 });
 
+Route::get('/Home', function () {
+    return view('Home.Home');
+
+});
 
 Route::get('/Login', function () {
     return view('auth.Login');
@@ -49,6 +53,14 @@ Route::get('/shipping', function () {
 
 Route::get('/payment', function () {
     return view('Service.payment');
+
+});
+Route::get('/order', function () {
+    return view('Service.order');
+
+});
+Route::get('/invoice', function () {
+    return view('Service.invoice');
 
 });
 

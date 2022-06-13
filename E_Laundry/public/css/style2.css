@@ -22,68 +22,20 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 80px;
-    border-bottom: 1px solid #f2f2f2;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-}
-
-.logo{
-    font-size: 26px;
-    font-weight: 800;
-}
-
-.menu-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-}
-
-.menu-item{
-    margin: 2rem;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.red{
-    color: rgb(167, 33, 10);
-}
-
-.menu-icons-container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon{
-    filter: invert(1);
-    height: 25px;
-    margin: 1rem;
-}
 
 .progress-checkout-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 60%;
 }
 
-.progress-step-container{
+/* .progress-step-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+} */
 
 .step-check{
     background-color: rgb(0, 132, 255);
@@ -92,7 +44,6 @@ header{
     border-radius: 30px;
     margin-bottom: 1rem;
     position: relative;
-    background-image: url(Resources/check.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -107,14 +58,11 @@ header{
     border: 2px solid grey;
 }
 
-.progress-step-container:nth-of-type(2) .step-check::after{
-    background-color: grey;
-}
-
 .progress-step-container:nth-of-type(2) .step-check{
     background-image: none;
     background-color: white;
     border: 2px solid rgb(0, 132, 255);
+    background-color: white;
 }
 
 .step-check::after{
