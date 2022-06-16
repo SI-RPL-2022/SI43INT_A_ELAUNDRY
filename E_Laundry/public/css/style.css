@@ -156,3 +156,29 @@ body{
 .form-services::placeholder{
     color: rgb(226, 226, 226);
 }
+/* invoice */
+h1 {
+    font-weight: 800;
+}
+strong {
+    font-weight: 700;
+}
+.text-laundry {
+    color: #264eca;
+}
+.box {
+    padding: 0.75rem;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }

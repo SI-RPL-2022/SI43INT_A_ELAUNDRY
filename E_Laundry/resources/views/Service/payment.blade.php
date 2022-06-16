@@ -17,17 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{{ url ('/public/js/main.js') }}"></script>
 </head>
-<div class="progress-checkout-container">
-    <div class="progress-step-container">
-        <div class="step-check"></div>
-        <span class="step-title">Shipping</span>
-    </div>
-    <div class="progress-step-container">
-        <div class="step-check"></div>
-        <span class="step-title">Payment</span>
-    </div>
-</div>
-
 <div class="form-container">
     <h2 class="form-title">Payment Details</h2>
     <form action="" class="checkout-form">
