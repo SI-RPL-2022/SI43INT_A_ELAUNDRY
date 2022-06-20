@@ -24,7 +24,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ url ('/DashboardAdmin') }}">
               <img src={{ url ("/image/E-LAUNDRYLOGO.png") }} height="75">
             </a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -109,7 +109,7 @@
                             <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Finish about 1-2 days</li>
                             <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Select parfume</li>
                         </ul>
-                        <a class="btn btn-primary btn-block mt-auto" href="#">Try it!</a>
+                        <a class="btn btn-primary btn-block mt-auto" href="{{ url ('form') }}">Try it!</a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                             <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Maximum pick up at 11.00</li>
                             <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Select parfume</li>
                         </ul>
-                        <a class="btn btn-primary btn-block mt-auto" href="#">Try it!</a>
+                        <a class="btn btn-primary btn-block mt-auto" href="{{ url ('form') }}">Try it!</a>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Finish about 1-2 days</li>
                         <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Select parfume</li>
                     </ul>
-                    <a class="btn btn-primary btn-block mt-auto" href="#">Try it!</a></div>
+                    <a class="btn btn-primary btn-block mt-auto" href="{{ url ('form') }}">Try it!</a></div>
                     </div>
                 </div>
             </div>

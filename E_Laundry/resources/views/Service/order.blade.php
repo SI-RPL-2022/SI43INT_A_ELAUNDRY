@@ -18,45 +18,12 @@
 
 <style>
 body{
-    background: linear-gradient(110deg, #BBDEFB 60%,#42A5F5  60%);                        
+    background: linear-gradient(110deg, #BBDEFB 60%,#42A5F5  60%);       
+                     
 }
         
-.shop{
-    font-size: 10px;
-}
-
 .space{
     letter-spacing: 0.8px !important;
-}
-
-.breadcrumb>li+li:before {
-    content: "" !important
-}
-
-.breadcrumb {
-    padding: 0px;
-    font-size: 10px;
-    color: #aaa !important;
-}
-
-.first {
-    background-color: white ;
-}
-
-a {
-    text-decoration: none !important;
-    color: #aaa ;
-}
-
-.btn-lg,.form-control-sm:focus,
-.form-control-sm:active,
-a:focus,a:active {
-    outline: none !important;
-    box-shadow: none !important
-}
-
-.form-control-sm:focus{
-    border:1.5px solid #4bb8a9 ; 
 }
 
 .btn-group-lg>.btn, .btn-lg {
@@ -77,43 +44,16 @@ a:focus,a:active {
     border:1px solid #4bb8a9;
 }
 
-
-
-.card-2{
-    margin-top: 40px !important;
-}
-
 .card-header{
     background-color: #fff;
     border-bottom:0px solid #aaaa !important;
+    
 }
         
-.small{
-    font-size: 9px !important;
-}
-
-.form-control-sm {
-    height: calc(2.2em + .5rem + 2px);
-    font-size: .875rem;
-    line-height: 1.5;
-    border-radius: 0;   
-}
-
-.cursor-pointer{
-    cursor: pointer;
-}
-
-
 .boxed-1{
     padding: 0px 8px 0 8px ;
     color: black !important;
     border: 1px solid #aaaa;
-}
-
-@media (max-width: 767px) {
-    .breadcrumb-item+.breadcrumb-item {
-        padding-left: 0
-    }
 }
 </style>
 

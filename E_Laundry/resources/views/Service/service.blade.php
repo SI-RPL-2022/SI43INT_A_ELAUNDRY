@@ -25,8 +25,8 @@
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <a class="btn btn-lg btn-kiloan form-control mt-3" href="{{ url ('/form') }}">Laundry Kiloan</a>
-                    <a class="btn btn-lg btn-sameday form-control mt-3" href="#">Laundry Same Day</a>
-                    <a class="btn btn-lg btn-dry form-control mt-3" href="#">Dry Cleaning</a>
+                    <a class="btn btn-lg btn-sameday form-control mt-3" href="{{ url ('/form') }}">Laundry Same Day</a>
+                    <a class="btn btn-lg btn-dry form-control mt-3" href="{{ url ('/form') }}">Dry Cleaning</a>
                 </div>
             </div>
         </div>

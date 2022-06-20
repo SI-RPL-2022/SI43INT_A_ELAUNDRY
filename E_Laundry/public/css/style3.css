@@ -1,14 +1,10 @@
 body{
     font-family: 'Inter', sans-serif;
-    
-}
-.hero-100{
-    min-height: 90vh;
-    display: block;
     background-image: url("/image/BG.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .icon-red{
     height:40px;
     padding: 9px 0px;

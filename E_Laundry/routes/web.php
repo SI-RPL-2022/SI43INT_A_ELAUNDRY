@@ -63,7 +63,36 @@ Route::get('/invoice', function () {
     return view('Service.invoice');
 
 });
+Route::get('/contact', function () {
+    return view('Dashboard.contact');
 
+});
+Route::get('/DashboardAdmin', function () {
+    return view('Dashboard.DashboardAdmin');
+
+});
+
+Route::get('/DashboardUser', function () {
+    return view('Dashboard.DashboardUser');
+
+});
+
+Route::get('/feedback', function () {
+    return view('Dashboard.feedback');
+
+});
+Route::get('/userprofile1', function () {
+    return view('Dashboard.userprofile1');
+
+});
+Route::get('/userprofile2', function () {
+    return view('Dashboard.userprofile2');
+
+});
+Route::get('/details', function () {
+    return view('Dashboard.details');
+
+});
 Route::post('/Register', [RegisterController::class, 'store']);
 
 Route::post('/Login', [LoginController::class, 'authenticate']);

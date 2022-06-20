@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-@include('layout.navbar')
+@include('layout.navbar2')
 <html lang="id">
 <head>
     <meta charset="UTF-8">
