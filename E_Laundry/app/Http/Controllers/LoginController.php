@@ -27,7 +27,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             // echo 'yes';
             
-            return redirect()->intended('/Dashboard');
+            return redirect()->intended('/');
         }
         // echo 'no';
 

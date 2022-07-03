@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -98,3 +98,5 @@ Route::post('/Register', [RegisterController::class, 'store']);
 Route::post('/Login', [LoginController::class, 'authenticate']);
 
 Route::get('/Dashboard', [DashboardController::class, 'index']);
+
+Route::post('/StoreForm', [FormController::class, 'store']);
