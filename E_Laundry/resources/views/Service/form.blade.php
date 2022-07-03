@@ -27,22 +27,78 @@
                       <h3>FILL THE FORM</h3>
                       <div class="row mb-3">
                         <div class="col-md-6 mx-auto">
-                          <form>
-                            <input class="form-control form-services mt-3" type="text" name="service">
-                            <input class="form-control form-services mt-3" type="text" name="nama" placeholder="Nama" required> 
-                            <input class="form-control form-services mt-3" type="text" name="no_telp" placeholder="Nomor Telepon" required>
-                            <input class="form-control form-services mt-3" type="number" name="berat" placeholder="Estimasi Berat (kg)" required>
-                            <input class="form-control form-services mt-3" type="text" name="perfume" placeholder="Jenis Parfum" required>
-                            <input class="form-control form-services mt-3" type="text" name="pengiriman" placeholder="Pengiriman" required>    
+
+                          <form action="/StoreForm" method="post" id="this_form">
+
+                            @csrf
+
+                            {{-- <input class="form-input my-3 @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name">
+                            @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror --}}
+
+                            <input class="form-control form-services mt-3 @error('service') is-invalid @enderror" type="text" name="service" placeholder="Service" required>
+                            @error('service')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
+
+                            <input class="form-control form-services mt-3 @error('name') is-invalid @enderror" type="text" name="name" placeholder="Nama" required>
+                            @error('name')
+                              <div class="invalid-feedback">
+                                  {{ $message }}
+                              </div>
+                            @enderror
+
+                            <input class="form-control form-services mt-3 @error('mobile_number') is-invalid @enderror" type="text" name="mobile_number" placeholder="Nomor Telepon" required>
+                            @error('mobile_number')
+                              <div class="invalid-feedback">
+                                  {{ $message }}
+                              </div>
+                            @enderror
+
+                            <input class="form-control form-services mt-3 @error('weight') is-invalid @enderror" type="number" name="weight" placeholder="Estimasi Berat (kg)" required>
+                            @error('weight')
+                              <div class="invalid-feedback">
+                                  {{ $message }}
+                              </div>
+                            @enderror
+
+                            <input class="form-control form-services mt-3 @error('perfume') is-invalid @enderror" type="text" name="perfume" placeholder="Jenis Parfum" required>
+                            @error('perfume')
+                              <div class="invalid-feedback">
+                                  {{ $message }}
+                              </div>
+                            @enderror
+
+                            {{-- <input class="form-control form-services mt-3" type="text" name="pengiriman" placeholder="Pengiriman" required>     --}}
+
+                            {{-- <div class="row">
+                              <div class="col-3">&nbsp;</div>
+                              <div class="col-3">&nbsp;</div>
+                              <div class="col-3">&nbsp;</div>
+                              <div class="col-3"><input class="btn btn-warning" type="submit" value="Continue"></div>
+                            </div> --}}
+
                           </form>
+
                         </div>
                       </div>
+
                       <div class="row">
                         <div class="col-3">&nbsp;</div>
                         <div class="col-3">&nbsp;</div>
                         <div class="col-3">&nbsp;</div>
-                        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/shipping') }}">Continue</a></div>
+                        <div class="col-3" type="submit">
+                          
+                          <button form="this_form" class="btn btn-warning" type="submit">Continue</button>
+                  
+                        </div>
                       </div>
+
                     </div>
                 </div>
             </div>
