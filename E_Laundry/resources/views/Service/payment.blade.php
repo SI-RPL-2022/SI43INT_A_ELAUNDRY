@@ -19,26 +19,62 @@
 </head>
 <div class="form-container">
     <h2 class="form-title">Payment Details</h2>
-    <form action="" class="checkout-form">
+    <form action="/StorePayment" class="checkout-form" method="post">
+        @csrf
+        {{-- <input class="form-input my-3 @error('name') is-invalid @enderror" name="name" id="name" placeholder="Name">
+            @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror --}}
+        
         <div class="input-line">
-            <label for="name">Name on card</label>
-            <input type="text" name="name" id="name" placeholder="Your name and surname">
+            <label for="name_on_card">Name on card</label>
+            <input class="@error('name_on_card') is-invalid @enderror" type="text" name="name_on_card" id="name_on_card" placeholder="Your name and surname">
+            @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
         </div>
+
         <div class="input-line">
-            <label for="name">Card number</label>
-            <input type="text" name="name" id="name" placeholder="1111-2222-3333-4444">
+            <label for="card_number">Card number</label>
+            <input class="@error('card_number') is-invalid @enderror" type="text" name="card_number" id="card_number" placeholder="1111-2222-3333-4444">
+            @error('card_number')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
         </div>
+
         <div class="input-container">
             <div class="input-line">
-                <label for="name">Expiring Date</label>
-                <input type="text" name="name" id="name" placeholder="09-21">
+                <label for="expiring_date">Expiring Date</label>
+                <input class="@error('expiring_date') is-invalid @enderror" type="text" name="expiring_date" id="expiring_date" placeholder="09-21">
+                @error('expiring_date')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
             <div class="input-line">
-                <label for="name">CVC</label>
-                <input type="text" name="name" id="name" placeholder="***">
+                <label for="cvc">CVC</label>
+                <input class="@error('cvc') is-invalid @enderror" type="text" name="cvc" id="cvc" placeholder="***">
+                @error('cvc')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
         </div>
-        <div class="col-3"><a class="btn btn-warning" href="{{ url ('/order') }}">Continue</a></div>
+
+        <div class="col-3">
+            {{-- <a class="btn btn-warning" href="{{ url ('/order') }}">Continue</a> --}}
+            <input class="btn btn-warning" type="submit" value="Continue">
+        </div>
+        
+
     </form>
 </div>
 </body>

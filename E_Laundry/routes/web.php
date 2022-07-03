@@ -4,6 +4,8 @@ use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ShippingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,3 +102,8 @@ Route::post('/Login', [LoginController::class, 'authenticate']);
 Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 Route::post('/StoreForm', [FormController::class, 'store']);
+
+Route::post('/StorePayment', [PaymentController::class, 'store']);
+
+Route::post('/StoreShipping', [ShippingController::class, 'store']);
+
